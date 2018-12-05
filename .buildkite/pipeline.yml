@@ -1,0 +1,14 @@
+steps:
+  - label: 'Static check'
+    command: 'make static-check'
+
+  - wait
+
+  - label: 'Test'
+    command: 'make test'
+
+  - wait
+
+  - label: 'Build & push image'
+    command: 'make build'
+    branches: 'master'
