@@ -1,6 +1,6 @@
 version: '2.0'
 services:
-  myob-api:
+  myob-pre-interview:
     build: .
     ports:
       - '3000:3000'

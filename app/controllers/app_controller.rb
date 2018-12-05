@@ -11,7 +11,7 @@ class AppController < ApplicationController
 
   def metadata
     render json: {
-      'myob-api': [
+      'myob-pre-interview': [
         {
           version: ENV['VERSION'],
           description: 'pre-interview technical test',

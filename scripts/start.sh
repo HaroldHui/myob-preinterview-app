@@ -2,5 +2,5 @@
 
 set -e
 
-echo 'Start Server'
+echo '--- Start Server'
 bundle exec puma -C ./config/puma.rb

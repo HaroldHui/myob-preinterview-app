@@ -28,7 +28,7 @@ describe 'Request test', type: :request do
       get '/metadata'
       expect(response.status).to eq 200
       expect(JSON.parse(response.body)).to include_json(
-        'myob-api': [
+        'myob-pre-interview': [
           {
             version: ENV['VERSION'],
             description: 'pre-interview technical test',
