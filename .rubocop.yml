@@ -1,0 +1,20 @@
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'vendor/**/*'
+    - 'app/lib/amqp/*'
+    - 'spec/*.rb'
+    - 'config/**/*'
+    - 'bin/**/*'
+    - 'test/**/*'
+  TargetRubyVersion: "2.5"
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+
+Documentation:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
