@@ -6,8 +6,8 @@ services:
       - '3000:3000'
     volumes:
       - .:/app
-    command: ./scripts/start
+    command: ./scripts/start.sh
     environment:
       SECRET_KEY_BASE: 4b321607e0ed6336469a55cd4acdbee4
-      VERSION: 1.0
+      VERSION: '1.0'
       LAST_COMMIT_SHA: sha
