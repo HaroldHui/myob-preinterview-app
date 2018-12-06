@@ -2,7 +2,7 @@
 
 set -e
 
-DOCKER_IMAGE=${APP_NAME}:${COMMIT}
+DOCKER_IMAGE=${DOCKER_USER}/${APP_NAME}:${COMMIT}
 echo $DOCKER_IMAGE
 
 echo '--- Builing image'
