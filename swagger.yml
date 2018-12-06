@@ -1,0 +1,57 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: Myob Pre Interview App
+paths:
+  /:
+    get:
+      summary: Root endpoint
+      operationId: root
+      responses:
+        200:
+          description: success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  text:
+                    type: string
+                    example: 'Hello World'
+  /health:
+    get:
+      summary: Health check
+      operationId: healthCheck
+      responses:
+        200:
+          description: success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: 'OK'
+  /metadata:
+    get:
+      summary: Show metadata
+      operationId: showMetadata
+      responses:
+        200:
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Metadata'
+components:
+  schemas:
+    Metadata:
+      type: object
+      properties:
+        version:
+          type: string
+        description:
+          type: string
+        lastcommitsha:
+          type: string

@@ -1,24 +1,3 @@
-# README
+# Myob Pre Interview App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[![Build status](https://badge.buildkite.com/24e853178664a8df7c65b7d6986123b7d7b2e466da21b093a9.svg)](https://buildkite.com/shuhuitest/myob-preinterview-app)
