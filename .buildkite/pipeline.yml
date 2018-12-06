@@ -1,6 +1,6 @@
 steps:
-  - label: 'Static check'
-    command: 'make static-check'
+  - label: 'Clean up docker'
+    command: 'make cleanup'
 
   - wait
 
