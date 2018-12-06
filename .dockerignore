@@ -24,3 +24,8 @@ spec/tmp
 .ruby-gemset
 
 .rvmrc
+
+#
+# Document
+#
+swagger.yml
