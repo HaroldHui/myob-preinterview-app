@@ -9,6 +9,6 @@ steps:
 
   - wait
 
-  - label: 'Build & push image'
-    command: 'make build'
+  - label: 'Package & push image'
+    command: 'make package'
     branches: 'master'
