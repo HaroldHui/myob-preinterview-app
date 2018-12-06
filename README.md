@@ -25,12 +25,7 @@ There are some other shell scripts for your development.
 ## Deployment
 
 ### Pipeline
-For this app, I do pipeline as code using [buildkite](https://buildkite.com/shuhuitest/myob-preinterview-app). Because the buildkite pipeline does not allow public access, I attached the credential as below.
-
-* username: shu.hui.test@gmail.com
-* password: u2zgFVZ6a3Ai
-* url: [https://buildkite.com/shuhuitest/myob-preinterview-app](https://buildkite.com/shuhuitest/myob-preinterview-app)
-
+For this app, I do pipeline as code using [buildkite](https://buildkite.com/shuhuitest/myob-preinterview-app). Because the buildkite pipeline does not allow public access, I will send the credential in email.
 
 The pipleline starts from commit to master branch which is the conceptual release branch. There's different layers that I would be using when building pipelines:
 
@@ -41,7 +36,7 @@ The pipleline starts from commit to master branch which is the conceptual releas
 
 #### Steps
 
-1. `cleanup`: Stop and remove old containers and volumes.
+1. `cleanup`: Stop and remove old docker containers and volumes.
 2. `test`: Application basic packaging and unit tests.
 3. `package`: Buid deployable artifact and upload it to docker hub.
 
@@ -57,12 +52,12 @@ The Docker Hub credential (use to push docker images) is set up in the environme
 
 ### Code and Doker Images are in Public Repository
 
-The souce code and docker images are in the pubic repositories (Github, Docker Hub) which is easy for other people to analyze and attack. In addition, I put the buildkite crendential in the README file as I want the reviewers have access to see the CI pipeline.
+The souce code and docker images are in the pubic repositories (Github, Docker Hub) which is easy for other people to analyze and attack.
 
 ### AWS
 
-Because the time is limit, I don't have enough time to setup AWS IAM role and permission for Buildkite agent. As a result, I gave buildkite agent Admin role which means anyone can control the building AWS account by following steps.
+Because the time is limit, I haven't setup AWS IAM role and permission for Buildkite agent. As a result, I gave buildkite agent Admin role which means anyone can control the building AWS account by following steps.
 
-1. Add a hack script to install aws cli and run whatever scripts you want.
+1. Add a hack script to install aws cli and run whatever scripts they want.
 2. Add the hack script in the buildkite pipeline.
 3. Push the commit to master branch.
