@@ -12,4 +12,9 @@ RUN mkdir /app
 ADD . /app
 WORKDIR /app
 
+RUN useradd -ms /bin/false appuser 
+RUN chown -R appuser /app
+
+USER appuser
+
 CMD ["./scripts/start"]
